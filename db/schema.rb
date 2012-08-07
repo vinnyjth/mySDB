@@ -11,14 +11,35 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120807010845) do
+ActiveRecord::Schema.define(:version => 20120807184216) do
 
   create_table "scouts", :force => true do |t|
     t.string   "name"
+    t.integer  "type_id"
+    t.boolean  "active"
+    t.boolean  "roster"
+    t.date     "joined_scouts"
+    t.date     "birthdate"
+    t.string   "street_address"
+    t.string   "city"
+    t.integer  "zip"
+    t.string   "home_phone"
+    t.string   "cell_phone"
+    t.string   "work_phone"
     t.string   "email"
-    t.string   "phone_number"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.integer  "scoutid"
+    t.date     "last_medical"
+    t.boolean  "medical_completed"
+    t.text     "medical_comment"
+    t.boolean  "photo_release"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
+
+  create_table "types", :force => true do |t|
+    t.string   "type"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

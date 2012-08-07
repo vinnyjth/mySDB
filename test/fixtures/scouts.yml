@@ -2,10 +2,40 @@
 
 one:
   name: MyString
+  type_id: 1
+  active: false
+  roster: false
+  joined_scouts: 2012-08-07
+  birthdate: 2012-08-07
+  street_address: MyString
+  city: MyString
+  zip: 1
+  home_phone: MyString
+  cell_phone: MyString
+  work_phone: MyString
   email: MyString
-  phone_number: MyString
+  scoutid: 1
+  last_medical: 2012-08-07
+  medical_completed: false
+  medical_comment: MyText
+  photo_release: false
 
 two:
   name: MyString
+  type_id: 1
+  active: false
+  roster: false
+  joined_scouts: 2012-08-07
+  birthdate: 2012-08-07
+  street_address: MyString
+  city: MyString
+  zip: 1
+  home_phone: MyString
+  cell_phone: MyString
+  work_phone: MyString
   email: MyString
-  phone_number: MyString
+  scoutid: 1
+  last_medical: 2012-08-07
+  medical_completed: false
+  medical_comment: MyText
+  photo_release: false

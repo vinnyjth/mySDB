@@ -18,7 +18,7 @@ class ScoutsControllerTest < ActionController::TestCase
 
   test "should create scout" do
     assert_difference('Scout.count') do
-      post :create, scout: { email: @scout.email, name: @scout.name, phone_number: @scout.phone_number }
+      post :create, scout: { active: @scout.active, birthdate: @scout.birthdate, cell_phone: @scout.cell_phone, city: @scout.city, email: @scout.email, home_phone: @scout.home_phone, joined_scouts: @scout.joined_scouts, last_medical: @scout.last_medical, medical_comment: @scout.medical_comment, medical_completed: @scout.medical_completed, name: @scout.name, photo_release: @scout.photo_release, roster: @scout.roster, scoutid: @scout.scoutid, street_address: @scout.street_address, type_id: @scout.type_id, work_phone: @scout.work_phone, zip: @scout.zip }
     end
 
     assert_redirected_to scout_path(assigns(:scout))
@@ -35,7 +35,7 @@ class ScoutsControllerTest < ActionController::TestCase
   end
 
   test "should update scout" do
-    put :update, id: @scout, scout: { email: @scout.email, name: @scout.name, phone_number: @scout.phone_number }
+    put :update, id: @scout, scout: { active: @scout.active, birthdate: @scout.birthdate, cell_phone: @scout.cell_phone, city: @scout.city, email: @scout.email, home_phone: @scout.home_phone, joined_scouts: @scout.joined_scouts, last_medical: @scout.last_medical, medical_comment: @scout.medical_comment, medical_completed: @scout.medical_completed, name: @scout.name, photo_release: @scout.photo_release, roster: @scout.roster, scoutid: @scout.scoutid, street_address: @scout.street_address, type_id: @scout.type_id, work_phone: @scout.work_phone, zip: @scout.zip }
     assert_redirected_to scout_path(assigns(:scout))
   end
 
