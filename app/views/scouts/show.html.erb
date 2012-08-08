@@ -1,95 +1,55 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Scout -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+</div>
 
-<p>
-  <b>Name:</b>
-  <%= @scout.name %>
-</p>
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
+  <dd><%= @scout.name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:type_id) %>:</strong></dt>
+  <dd><%= @scout.type_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:active) %>:</strong></dt>
+  <dd><%= @scout.active %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:roster) %>:</strong></dt>
+  <dd><%= @scout.roster %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:joined_scouts) %>:</strong></dt>
+  <dd><%= @scout.joined_scouts %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:birthdate) %>:</strong></dt>
+  <dd><%= @scout.birthdate %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:street_address) %>:</strong></dt>
+  <dd><%= @scout.street_address %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:city) %>:</strong></dt>
+  <dd><%= @scout.city %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:zip) %>:</strong></dt>
+  <dd><%= @scout.zip %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:home_phone) %>:</strong></dt>
+  <dd><%= @scout.home_phone %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:cell_phone) %>:</strong></dt>
+  <dd><%= @scout.cell_phone %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:work_phone) %>:</strong></dt>
+  <dd><%= @scout.work_phone %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:email) %>:</strong></dt>
+  <dd><%= @scout.email %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:scoutid) %>:</strong></dt>
+  <dd><%= @scout.scoutid %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:last_medical) %>:</strong></dt>
+  <dd><%= @scout.last_medical %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:medical_completed) %>:</strong></dt>
+  <dd><%= @scout.medical_completed %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:medical_comment) %>:</strong></dt>
+  <dd><%= @scout.medical_comment %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:photo_release) %>:</strong></dt>
+  <dd><%= @scout.photo_release %></dd>
+</dl>
 
-<p>
-  <b>Type:</b>
-  <%= @scout.type_id %>
-</p>
-
-<p>
-  <b>Active:</b>
-  <%= @scout.active %>
-</p>
-
-<p>
-  <b>Roster:</b>
-  <%= @scout.roster %>
-</p>
-
-<p>
-  <b>Joined scouts:</b>
-  <%= @scout.joined_scouts %>
-</p>
-
-<p>
-  <b>Birthdate:</b>
-  <%= @scout.birthdate %>
-</p>
-
-<p>
-  <b>Street address:</b>
-  <%= @scout.street_address %>
-</p>
-
-<p>
-  <b>City:</b>
-  <%= @scout.city %>
-</p>
-
-<p>
-  <b>Zip:</b>
-  <%= @scout.zip %>
-</p>
-
-<p>
-  <b>Home phone:</b>
-  <%= @scout.home_phone %>
-</p>
-
-<p>
-  <b>Cell phone:</b>
-  <%= @scout.cell_phone %>
-</p>
-
-<p>
-  <b>Work phone:</b>
-  <%= @scout.work_phone %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%= @scout.email %>
-</p>
-
-<p>
-  <b>Scoutid:</b>
-  <%= @scout.scoutid %>
-</p>
-
-<p>
-  <b>Last medical:</b>
-  <%= @scout.last_medical %>
-</p>
-
-<p>
-  <b>Medical completed:</b>
-  <%= @scout.medical_completed %>
-</p>
-
-<p>
-  <b>Medical comment:</b>
-  <%= @scout.medical_comment %>
-</p>
-
-<p>
-  <b>Photo release:</b>
-  <%= @scout.photo_release %>
-</p>
-
-
-<%= link_to 'Edit', edit_scout_path(@scout) %> |
-<%= link_to 'Back', scouts_path %>
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              scouts_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_scout_path(@scout), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              scout_path(@scout),
+              :method => 'delete',
+              :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
+              :class => 'btn btn-danger' %>
+</div>
