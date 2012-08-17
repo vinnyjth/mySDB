@@ -1,4 +1,4 @@
 class Type < ActiveRecord::Base
-  attr_accessible :type
-  has_many :scouts
+  attr_accessible :role
+  belongs_to :scouts
 end

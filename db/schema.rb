@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120807184216) do
+ActiveRecord::Schema.define(:version => 20120809030640) do
+
+  create_table "medical_forms", :force => true do |t|
+    t.integer  "scout_id"
+    t.string   "status"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "scouts", :force => true do |t|
     t.string   "name"
@@ -37,7 +44,8 @@ ActiveRecord::Schema.define(:version => 20120807184216) do
   end
 
   create_table "types", :force => true do |t|
-    t.string   "type"
+    t.string   "role"
+    t.integer  "scout_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

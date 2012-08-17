@@ -1,6 +1,6 @@
 <%= simple_form_for @scout, :html => { :class => 'form-horizontal' } do |f| %>
   <%= f.input :name %>
-  <%= f.input :type_id %>
+  <%= f.association :types, :label_method => :role, :value_method => :id %>
   <%= f.input :active %>
   <%= f.input :roster %>
   <%= f.input :joined_scouts %>

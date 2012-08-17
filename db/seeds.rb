@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Type.create(role: 'Scout')
+Type.create(role: 'Adult')
+Type.create(role: 'Leader')
+
+MedicalForm.create(status: 'Part A')
+MedicalForm.create(status: 'Part B')
+MedicalForm.create(status: 'Part C')
+MedicalForm.create(status: 'Insurance Card')
