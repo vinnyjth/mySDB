@@ -45,7 +45,6 @@ ActiveRecord::Schema.define(:version => 20120809030640) do
 
   create_table "types", :force => true do |t|
     t.string   "role"
-    t.integer  "scout_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

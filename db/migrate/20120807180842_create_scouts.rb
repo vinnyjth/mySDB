@@ -2,6 +2,7 @@ class CreateScouts < ActiveRecord::Migration
   def change
     create_table :scouts do |t|
       t.string :name
+      t.string :role
       t.integer :type_id
       t.boolean :active
       t.boolean :roster
